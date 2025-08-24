@@ -1,0 +1,142 @@
+.hero {
+  background-image: url("../../assets/bg1.jpg");
+  position: relative; 
+  height: 100vh; 
+  background-size: cover;
+    background-position: center ;  
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  background-image: radial-gradient(rgba(53, 52, 52, 0.445) 1px, transparent 2px);
+  background-size: 3px 3px; 
+  z-index: 0; 
+}
+
+.splitTextContainer {
+  display: flex;
+  font-size: 240px; 
+  font-family: "Italianno";
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  z-index: 1;
+
+}
+
+.textPart {
+  display: inline-block;
+  position: relative;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.left {
+  transform: translateX(-200%);
+  animation-name: slide-in-left;
+}
+
+.right {
+  transform: translateX(200%);
+  animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+  0% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  0% { transform: translateX(200%); }
+  100% { transform: translateX(0); }
+}
+
+.soustitre {
+  margin: 0;
+  font-family: "Istok Web";
+  font-weight: 400;
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  z-index: 1; 
+}
+
+
+@media (max-width: 400px) {
+  .splitTextContainer {
+    font-size: 75px;  
+  }
+  .soustitre {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 401px) and  (max-width: 509px) {
+
+  .splitTextContainer {
+    font-size: 95px;  
+  }
+  .soustitre {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 509px) and  (max-width: 710px) {
+  .splitTextContainer {
+    font-size: 115px;  
+  }
+  .soustitre {
+    font-size: 18px;
+  }
+}
+
+
+
+@media (min-width: 710px) and (max-width: 992px) {
+  .splitTextContainer {
+    font-size: 160px;
+  }
+  .soustitre {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1127px) {
+  .splitTextContainer {
+    font-size: 210px;
+  }
+  .soustitre {
+    font-size: 24px;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {  
+    .hero {
+    background-image: url("../../assets/bg.JPG");
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero {
+    background-image: url("../../assets/home.jpg");
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("../../assets/home.jpg");
+  }
+}

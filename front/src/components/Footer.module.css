@@ -1,0 +1,51 @@
+.container {
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    background-color: white;
+    padding: 0.8rem;
+    bottom: 0;
+    
+  }
+  
+
+.home{
+
+  background: rgba(69, 69, 69, 0.4); 
+  backdrop-filter: blur(2px);  
+  position: fixed;
+  margin-top: 10px;
+  bottom: 0;    
+       
+  p{
+      color:white;
+    }
+}
+
+.other{  
+   z-index: 30;
+   p{  
+        color: #7D5428;
+    }
+   
+}
+
+
+@media (max-width: 540px) {
+   .menu a {
+   font-size: 18px;
+ }
+}
+@media (min-width: 541px) and (max-width: 914px) {
+   .menu a {
+   font-size: 23px;
+ }
+
+}
+
+@media (min-width: 915px) and (max-width: 1024px) {
+   .menu a {
+   font-size: 27px;
+ }
+
+}
