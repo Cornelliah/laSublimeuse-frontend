@@ -21,7 +21,6 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* Icône personnalisée */
 .portfolioContainer .card::after {
   content: "";
   position: absolute;
