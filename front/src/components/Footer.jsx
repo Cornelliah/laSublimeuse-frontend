@@ -12,7 +12,7 @@ function Footer() {
        <p> &copy; {new Date().getFullYear()} La Sublimeuse – Tous droits réservés</p>
       {isAdmin && (
         <p>
-          <a href="http://localhost:1337/admin" target="_blank" rel="noopener noreferrer">
+          <a href="https://lasublimeuse-backend.onrender.com/admin" target="_blank" rel="noopener noreferrer">
             Admin Login
           </a>
         </p>

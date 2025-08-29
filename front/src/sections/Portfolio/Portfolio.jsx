@@ -9,12 +9,12 @@ function PortFolio() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch('http://localhost:1337/api/upload/files');
+        const res = await fetch('https://lasublimeuse-backend.onrender.com/api/upload/files');
         const data = await res.json();
 
         if (data && data.length) {
           
-          const urls = data.map(img => `http://localhost:1337${img.url}`);
+          const urls = data.map(img => `https://lasublimeuse-backend.onrender.com${img.url}`);
           setImages(urls);
         } else {
           console.warn('Aucune image trouvée dans la Media Library');
