@@ -20,7 +20,7 @@ function Contact() {
           <div className={styles.infoGrid}>
             <div className={styles.card}>
               <h3>Email</h3>
-              <p>contactlasublimeuse@gmail.com</p>
+              <p>contactlasublimeuse@ <br />gmail.com</p>
             </div>
             <div className={styles.card}>
               <h3>Téléphone</h3>
