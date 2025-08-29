@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './PortFolioStyles.module.css';
 import PortfolioCard from '../../components/PortfolioCard';
+import zoomIcon from "../../assets/zoom.png";
 
 function PortFolio() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -32,7 +33,7 @@ function PortFolio() {
 
   return (
     <div id="portfolio" className={styles.container}>
-      <div className={styles.portfolioContainer}>
+      <div className={styles.portfolioContainer} style={{ "--zoom-icon": `url(${zoomIcon})` }}>
         {images.map((url, index) => (
           <div className={styles.card} key={index} onClick={() => handleImageClick(url)}>
             <PortfolioCard source={url} />
