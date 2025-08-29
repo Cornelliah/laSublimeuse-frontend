@@ -1,13 +1,11 @@
 import React from 'react'
 
-function PortfolioCard({source, link,}) {
+function PortfolioCard({source}) {
   return (
      
-      <a href="" target='_blank'>
-                  
-         <img className='Hover' src={source} alt=""/>
-        
-     </a>
+    <div className='card'>               
+         <img className='Hover' src={source} alt=""/>        
+     </div>
       
   )
 }

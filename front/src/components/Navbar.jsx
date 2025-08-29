@@ -12,9 +12,7 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav
-      className={`${styles.navbar} ${isHome ? styles.home : styles.other}`}
-    >
+    <nav className={`${styles.navbar} ${isHome ? styles.home : styles.other}`}>
      
       {!isHome && <h1 className={styles.logo}> La Sublimeuse</h1>}
 
@@ -32,7 +30,7 @@ export default function Navbar() {
       </button>
 
       {/* Menu mobile */}
-       <div className={styles.overlay} onClick={closeMenu}></div>
+       <div className={`${styles.overlay} ${!isOpen ? styles.hidden : ""}`} onClick={closeMenu}></div>
       { isOpen && (
         <div className={styles.mobileMenu}>
           <Link to="/" onClick={toggleMenu}>Accueil</Link>

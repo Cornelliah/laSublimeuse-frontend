@@ -18,22 +18,31 @@
   background: transparent;
   color: white;
 
-  .hamburger {
+}
+
+.home  .hamburger {
   color: white;
  }
 
+.home .mobileMenu {
+    background: rgba(69, 69, 69, 0.4); 
+    backdrop-filter: blur(2px);  
+    
+}
+
+.home .mobileMenu a {
+  color: white;
 }
 
 .other {
   background: white;
   color: #7D5428;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  
-  .hamburger {
-  color: #7D5428;
- }
 }
 
+.other .hamburger {
+  color: #7D5428;
+ }
 
 .logo {
   color: #7D5428;
@@ -109,6 +118,11 @@
   height: 100%;
   background: transparent; 
   z-index: 10;
+}
+
+.overlay.hidden { 
+  pointer-events: none;
+  background: transparent;
 }
 @media (max-width:610px) {
   .menu {
