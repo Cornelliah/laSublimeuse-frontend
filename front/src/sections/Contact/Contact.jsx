@@ -84,7 +84,7 @@ function Contact() {
               <img src={tiktok} alt="tiktok" className={styles.reseau1} />
               TikTok
             </a>
-            <a href="https://wa.me/22999999999" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/221785309552" target="_blank" rel="noreferrer">
               <img src={whatsapp} alt="whatsapp" className={styles.reseau1} />
               WhatsApp
             </a>
