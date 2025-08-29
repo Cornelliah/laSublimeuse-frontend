@@ -34,7 +34,7 @@ function PortFolio() {
     <div id="portfolio" className={styles.container}>
       <div className={styles.portfolioContainer}>
         {images.map((url, index) => (
-          <div key={index} onClick={() => handleImageClick(url)}>
+          <div className={styles.card} key={index} onClick={() => handleImageClick(url)}>
             <PortfolioCard source={url} />
           </div>
         ))}
