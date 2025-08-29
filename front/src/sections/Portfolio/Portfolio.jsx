@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './PortFolioStyles.module.css';
 import PortfolioCard from '../../components/PortfolioCard';
-import zoomIcon from "../../assets/loupe.png";
+import zoomIcon from "../../assets/loupe1.png";
 
 function PortFolio() {
   const [selectedImage, setSelectedImage] = useState(null);
