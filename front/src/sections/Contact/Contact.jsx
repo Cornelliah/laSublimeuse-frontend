@@ -94,6 +94,7 @@ function Contact() {
         {submitted ? (
           <div className={styles.thankYou}>
             <h2>Merci ! Votre message a été envoyé.</h2>
+            <br />
             <button onClick={() => setSubmitted(false)}>Retour au formulaire</button>
           </div>
         ) : (
