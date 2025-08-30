@@ -14,8 +14,8 @@ function PortFolio() {
         const data = await res.json();
 
         if (data && data.length) {
-          
-          const urls = data.map(img => `https://lasublimeuse-backend.onrender.com${img.url}`);
+          // ✅ Avec Cloudinary, on récupère directement l’URL publique
+          const urls = data.map(img => img.url);
           setImages(urls);
         } else {
           console.warn('Aucune image trouvée dans la Media Library');
