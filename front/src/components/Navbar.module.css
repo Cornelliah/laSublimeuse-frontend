@@ -27,6 +27,7 @@
 .home .mobileMenu {
     background: rgba(69, 69, 69, 0.4); 
     backdrop-filter: blur(2px);  
+    border: none;
     
 }
 
@@ -106,7 +107,7 @@
   margin-right: auto;
   text-align: center;
   z-index: 30;
-  border-color:   #7d542887;
+  border: 1px solid #7d5428ec;
 ;
 }
 
