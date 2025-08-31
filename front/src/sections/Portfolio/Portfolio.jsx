@@ -32,7 +32,7 @@ function PortFolio() {
     fetchImages();
 
   const handleScroll = () => {
-      setShowTopButton(window.scrollY > 300);
+      setShowTopButton(window.scrollY >50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
