@@ -150,6 +150,8 @@
   }
   .home{
      backdrop-filter: blur(2px); 
+     background: linear-gradient(90deg, #9e764b, #f3f3f3, #7a7a7a);
+
 
   }
 }
