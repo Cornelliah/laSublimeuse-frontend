@@ -160,7 +160,7 @@
   .home { 
     background: transparent;
   }
-  .logo{
+  .home .logo{
     display: none;
   }
   
