@@ -49,6 +49,17 @@
   font-weight: 400;
   font-size: 35px;
   text-decoration: none;
+  position: relative;
+  background: linear-gradient(90deg, #7d5428, #ffcf8b, #7d5428);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .menu {
