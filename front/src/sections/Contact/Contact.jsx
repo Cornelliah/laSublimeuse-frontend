@@ -23,7 +23,7 @@ function Contact() {
   const handleCopy = (text) => {
   navigator.clipboard.writeText(text)
     .then(() => {
-      setCopyMessage(`"${text}" copié !`);
+      setCopyMessage(`Copié !`);
       setTimeout(() => setCopyMessage(''), 2000); 
     })
     .catch(() => {
@@ -70,13 +70,22 @@ function Contact() {
         <div className={styles.leftCol}>
            {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
           <div className={styles.infoGrid}>
-            <div className={styles.card}  onClick={() =>handleCopy('contactlasublimeuse@gmail.com')}>
+
+            <div className={styles.card}>
               <h3>Email</h3>
-              <p>contactlasublimeuse@ <br />gmail.com</p>
+              <p>contactlasublimeuse@ <br />gmail.com
+                <FaRegCopy 
+                className={styles.copyIcon} 
+                 onClick={() => handleCopy('contactlasublimeuse@gmail.com')} />
+              </p>
             </div>
-            <div className={styles.card} onClick={() => handleCopy('+221785309552')}>
+            <div className={styles.card} >
               <h3>Téléphone</h3>
-              <p>+221 78 530 95 52</p>
+              <p>+221 78 530 95 52
+                 <FaRegCopy 
+                   className={styles.copyIcon} 
+                   onClick={() => handleCopy('+221785309552')} />
+              </p>
             </div>
             <div className={styles.card}>
               <h3>Adresse</h3>
