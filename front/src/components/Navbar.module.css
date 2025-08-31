@@ -80,6 +80,8 @@
 
 
 .hamburger {
+  all: unset;     
+  line-height: 1; 
   display: none;
   background: none;
   border: none;
