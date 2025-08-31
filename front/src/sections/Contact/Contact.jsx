@@ -62,14 +62,14 @@ function Contact() {
   return (
     <div className={styles.contactPage}>
       <h1 className={styles.title}>Contactez La Sublimeuse</h1>
-      {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
 
       <p className={styles.subtitle}>
         Pour toute demande d'information, de réservation ou de collaboration, je suis à votre écoute.
       </p>
       <div className={styles.contentWrapper}>
         <div className={styles.leftCol}>
-         
+               {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
+
           <div className={styles.infoGrid}>
             <div className={styles.card}  onClick={() =>handleCopy('contactlasublimeuse@gmail.com')}>
               <h3>Email</h3>
