@@ -68,8 +68,7 @@ function Contact() {
       </p>
       <div className={styles.contentWrapper}>
         <div className={styles.leftCol}>
-               {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
-
+           {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
           <div className={styles.infoGrid}>
             <div className={styles.card}  onClick={() =>handleCopy('contactlasublimeuse@gmail.com')}>
               <h3>Email</h3>
