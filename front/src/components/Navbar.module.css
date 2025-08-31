@@ -164,7 +164,8 @@
          -webkit-text-fill-color: transparent;
           animation: shine 3s linear infinite;
 
-}
+        }
+      }
  @media (min-width: 611px) and (max-width: 914px) {
    .menu a {
    font-size: 23px;
