@@ -14,7 +14,9 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} ${isHome ? styles.home : styles.other}`}>
      
-      {!isHome && <h1 className={styles.logo}> La Sublimeuse</h1>}
+      {!isHome &&   <Link to="/" className={styles.logo}>
+          La Sublimeuse
+        </Link>}
 
       {/* Menu*/}
       <ul className={styles.menu}>
