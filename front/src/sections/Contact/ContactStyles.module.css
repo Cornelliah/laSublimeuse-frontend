@@ -56,6 +56,7 @@
   box-shadow: 0 0 6px rgba(210, 209, 208, 0.473);
   width: 220px;
   max-width: 90%;
+  cursor: default;
 }
 .card h3 {
      color: #5f3b05;
