@@ -5,10 +5,12 @@ import Portfolio from "./sections/Portfolio/Portfolio";
 import Services from "./sections/Services/Services";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <BrowserRouter>
+     <ScrollToTop />
       <div className="app">
         <Navbar />
         
