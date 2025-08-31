@@ -14,8 +14,11 @@ function PortFolio() {
         const data = await res.json();
 
         if (data && data.length) {
-          // ✅ Avec Cloudinary, on récupère directement l’URL publique
-          const urls = data.map(img => img.url);
+          const urls = data.map(img => ({
+            thumb: img.attributes.formats?.small?.url || img.attributes.formats?.thumbnail?.url || img.attributes.url,
+            original: img.attributes.url,
+            name: img.attributes.name,
+          }));
           setImages(urls);
         } else {
           console.warn('Aucune image trouvée dans la Media Library');
@@ -33,10 +36,21 @@ function PortFolio() {
 
   return (
     <div id="portfolio" className={styles.container}>
-      <div className={styles.portfolioContainer} style={{ "--zoom-icon": `url(${zoomIcon})` }}>
-        {images.map((url, index) => (
-          <div className={styles.card} key={index} onClick={() => handleImageClick(url)}>
-            <PortfolioCard source={url} />
+      <div 
+        className={styles.portfolioContainer} 
+        style={{ "--zoom-icon": `url(${zoomIcon})` }}
+      >
+        {images.map((img, index) => (
+          <div 
+            className={styles.card} 
+            key={index} 
+            onClick={() => handleImageClick(img.original)}
+          >
+            <PortfolioCard 
+              source={img.thumb} 
+              alt={img.name} 
+              loading="lazy" 
+            />
           </div>
         ))}
       </div>
