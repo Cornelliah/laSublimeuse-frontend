@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,7 +85,8 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  margin-right: 0; 
+  margin-left: auto;
+  margin-right: 0;
   z-index: 30;
 }
 
@@ -93,7 +94,7 @@
 .mobileMenu {
   position: absolute;
   top: 100%;
-  right: 2em;
+  right: 1em;
   width: 45%;
   background: white;
   display: flex;
