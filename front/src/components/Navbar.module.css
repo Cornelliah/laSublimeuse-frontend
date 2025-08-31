@@ -154,7 +154,7 @@
 
 }
 
-@media (min-width: 768px) {
+@media (min-width:611px) {
   .home { 
     background: transparent;
   }
