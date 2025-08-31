@@ -70,7 +70,7 @@ function Contact() {
       </p>
       <div className={styles.contentWrapper}>
         <div className={styles.leftCol}>
-           {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
+          
           <div className={styles.infoGrid}>
 
             <div className={styles.card}>
@@ -89,6 +89,7 @@ function Contact() {
                    onClick={() => handleCopy('+221785309552')} />
               </p>
             </div>
+             {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
             <div className={styles.card}>
               <h3>Adresse</h3>
               <p>Dakar, Sénégal</p>
