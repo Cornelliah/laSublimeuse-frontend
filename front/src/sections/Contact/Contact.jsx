@@ -5,6 +5,8 @@ import facebook from '../../assets/face1.png';
 import whatsapp from '../../assets/whatsapp.png';
 import tiktok from '../../assets/tiktok.png';
 import logo from '../../assets/logo.png';
+import { FaRegCopy } from 'react-icons/fa';
+
 
 function Contact() {
   const [formData, setFormData] = useState({
