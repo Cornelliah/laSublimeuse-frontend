@@ -20,6 +20,10 @@
 
 }
 
+.home .logo{
+  color: white;
+}
+
 .home  .hamburger {
   color: white;
  }
@@ -155,6 +159,6 @@
 
 @media (min-width: 768px) {
   .logo{
-    font-size: 45px; 
+    display: none;
   }
 }
