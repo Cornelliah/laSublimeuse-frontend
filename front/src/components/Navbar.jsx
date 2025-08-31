@@ -16,6 +16,9 @@ export default function Navbar() {
      
        <Link to="/" className={styles.logo}>
           La Sublimeuse
+          <span className={styles.star1}>✦</span>
+          <span className={styles.star2}>✧</span>
+          <span className={styles.star3}>✦</span>
         </Link>
 
       {/* Menu*/}
