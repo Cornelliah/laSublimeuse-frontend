@@ -8,24 +8,25 @@ function PortFolio() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-  const fetchImages = async () => {
-    try {
-      const res = await fetch('https://lasublimeuse-backend.onrender.com/api/upload/files');
-      const data = await res.json();
+    const fetchImages = async () => {
+      try {
+        const res = await fetch('https://lasublimeuse-backend.onrender.com/api/upload/files');
+        const data = await res.json();
 
-      if (data && data.length) {
-        const urls = data.map(img => img.attributes.formats?.thumbnail?.url || img.attributes.url);
-        setImages(urls);
-      } else {
-        console.warn('Aucune image trouvée dans la Media Library');
+        if (data && data.length) {
+          
+          const urls = data.map(img => img.url);
+          setImages(urls);
+        } else {
+          console.warn('Aucune image trouvée dans la Media Library');
+        }
+      } catch (err) {
+        console.error('Erreur fetch images', err);
       }
-    } catch (err) {
-      console.error('Erreur fetch images', err);
-    }
-  };
+    };
 
-  fetchImages();
-}, []);
+    fetchImages();
+  }, []);
 
   const handleImageClick = (src) => setSelectedImage(src);
   const closeLightbox = () => setSelectedImage(null);
