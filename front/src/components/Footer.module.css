@@ -13,7 +13,6 @@
 
   background: rgba(69, 69, 69, 0.4); 
   backdrop-filter: blur(2px);  
-  margin-top: 10px;
   bottom: 0;    
        
 
@@ -43,6 +42,7 @@
         font-size: smaller;
         text-decoration: none;
     }
+
 @media (min-width:611px) {
   .home{
       position: fixed;
