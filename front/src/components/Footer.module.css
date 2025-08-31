@@ -10,9 +10,9 @@
   
 
 .home{
-  background: rgba(69, 69, 69, 0.4); 
+  position: fixed;
+  background: rgba(69, 69, 69, 0.4);  
   backdrop-filter: blur(2px);  
-  position: fixed;     
   bottom: 0;    
        
 

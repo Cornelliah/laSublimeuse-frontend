@@ -16,7 +16,6 @@
 
 .home {
  background: rgba(69, 69, 69, 0.4); 
- backdrop-filter: blur(2px); 
   color: white;
 
 }
@@ -137,6 +136,10 @@
   }
   .hamburger {
     display: block;
+  }
+  .home{
+     backdrop-filter: blur(2px); 
+
   }
 }
  @media (min-width: 611px) and (max-width: 914px) {
