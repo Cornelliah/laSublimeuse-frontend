@@ -13,12 +13,24 @@ function Contact() {
     sujet: '',
     message: ''
   });
-
+  const [copyMessage, setCopyMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
+  const handleCopy = (text) => {
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      setCopyMessage(`"${text}" copié !`);
+      setTimeout(() => setCopyMessage(''), 2000); 
+    })
+    .catch(() => {
+      setCopyMessage('Impossible de copier');
+      setTimeout(() => setCopyMessage(''), 2000);
+    });
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,18 +62,20 @@ function Contact() {
   return (
     <div className={styles.contactPage}>
       <h1 className={styles.title}>Contactez La Sublimeuse</h1>
+      {copyMessage && <div className={styles.copyMessage}>{copyMessage}</div>}
+
       <p className={styles.subtitle}>
         Pour toute demande d'information, de réservation ou de collaboration, je suis à votre écoute.
       </p>
       <div className={styles.contentWrapper}>
         <div className={styles.leftCol}>
-          {/* Infos et réseaux sociaux */}
+         
           <div className={styles.infoGrid}>
-            <div className={styles.card}>
+            <div className={styles.card}  onClick={() =>handleCopy('contactlasublimeuse@gmail.com')}>
               <h3>Email</h3>
               <p>contactlasublimeuse@ <br />gmail.com</p>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={() => handleCopy('+221785309552')}>
               <h3>Téléphone</h3>
               <p>+221 78 530 95 52</p>
             </div>
