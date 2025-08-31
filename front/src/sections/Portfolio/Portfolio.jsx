@@ -8,49 +8,34 @@ function PortFolio() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const res = await fetch('https://lasublimeuse-backend.onrender.com/api/upload/files');
-        const data = await res.json();
+  const fetchImages = async () => {
+    try {
+      const res = await fetch('https://lasublimeuse-backend.onrender.com/api/upload/files');
+      const data = await res.json();
 
-        if (data && data.length) {
-          const urls = data.map(img => ({
-            thumb: img.attributes.formats?.small?.url || img.attributes.formats?.thumbnail?.url || img.attributes.url,
-            original: img.attributes.url,
-            name: img.attributes.name,
-          }));
-          setImages(urls);
-        } else {
-          console.warn('Aucune image trouvée dans la Media Library');
-        }
-      } catch (err) {
-        console.error('Erreur fetch images', err);
+      if (data && data.length) {
+        const urls = data.map(img => img.attributes.formats?.thumbnail?.url || img.attributes.url);
+        setImages(urls);
+      } else {
+        console.warn('Aucune image trouvée dans la Media Library');
       }
-    };
+    } catch (err) {
+      console.error('Erreur fetch images', err);
+    }
+  };
 
-    fetchImages();
-  }, []);
+  fetchImages();
+}, []);
 
   const handleImageClick = (src) => setSelectedImage(src);
   const closeLightbox = () => setSelectedImage(null);
 
   return (
     <div id="portfolio" className={styles.container}>
-      <div 
-        className={styles.portfolioContainer} 
-        style={{ "--zoom-icon": `url(${zoomIcon})` }}
-      >
-        {images.map((img, index) => (
-          <div 
-            className={styles.card} 
-            key={index} 
-            onClick={() => handleImageClick(img.original)}
-          >
-            <PortfolioCard 
-              source={img.thumb} 
-              alt={img.name} 
-              loading="lazy" 
-            />
+      <div className={styles.portfolioContainer} style={{ "--zoom-icon": `url(${zoomIcon})` }}>
+        {images.map((url, index) => (
+          <div className={styles.card} key={index} onClick={() => handleImageClick(url)}>
+            <PortfolioCard source={url} />
           </div>
         ))}
       </div>
