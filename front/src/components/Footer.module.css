@@ -2,16 +2,15 @@
     text-align: center;
    box-shadow: 0 -2px 5px rgba(81, 81, 81, 0.162);
    width: 100%;
-    background-color: white;
-    padding: 0.8rem;
-    bottom: 0;
+   background-color: white;
+   padding: 0.8rem;
+   bottom: 0;
     
   }
   
 
 .home{
-
-  background: rgba(69, 69, 69, 0.4); 
+  background: rgba(69, 69, 69, 0.733); 
   backdrop-filter: blur(2px);  
   bottom: 0;    
        
@@ -46,6 +45,8 @@
 @media (min-width:611px) {
   .home{
       position: fixed;
+      background: rgba(69, 69, 69, 0.4); 
+     backdrop-filter: blur(2px);  
 
   }
 }
