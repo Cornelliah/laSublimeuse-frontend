@@ -129,6 +129,8 @@
   pointer-events: none;
   background: transparent;
 }
+
+
 @media (max-width:610px) {
   .menu {
     display: none;
@@ -149,4 +151,10 @@
    font-size: 25px;
  }
 
+}
+
+@media (min-width: 768px) {
+  .logo{
+    font-size: 45px; 
+  }
 }
