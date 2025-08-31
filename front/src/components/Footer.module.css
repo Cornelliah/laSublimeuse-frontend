@@ -1,5 +1,5 @@
 .container {
-    text-align: center;
+   text-align: center;
    box-shadow: 0 -2px 5px rgba(81, 81, 81, 0.162);
    width: 100%;
    background-color: white;
@@ -10,8 +10,9 @@
   
 
 .home{
-  background: rgba(69, 69, 69, 0.733); 
+  background: rgba(69, 69, 69, 0.4); 
   backdrop-filter: blur(2px);  
+  position: fixed;     
   bottom: 0;    
        
 
@@ -42,11 +43,3 @@
         text-decoration: none;
     }
 
-@media (min-width:611px) {
-  .home{
-      position: fixed;
-      background: rgba(69, 69, 69, 0.4); 
-     backdrop-filter: blur(2px);  
-
-  }
-}
