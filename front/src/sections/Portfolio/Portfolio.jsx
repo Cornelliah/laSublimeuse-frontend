@@ -2,10 +2,14 @@ import { useEffect, useState } from 'react';
 import styles from './PortFolioStyles.module.css';
 import PortfolioCard from '../../components/PortfolioCard';
 import zoomIcon from "../../assets/loupe1.png";
+import topIcon from "../../assets/go-up.png";
+
 
 function PortFolio() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [images, setImages] = useState([]);
+  const [showTopButton, setShowTopButton] = useState(false);
+
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -26,7 +30,17 @@ function PortFolio() {
     };
 
     fetchImages();
-  }, []);
+
+  const handleScroll = () => {
+      setShowTopButton(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  
+  },
+   []);
+
+  
 
   const handleImageClick = (src) => setSelectedImage(src);
   const closeLightbox = () => setSelectedImage(null);
@@ -46,6 +60,16 @@ function PortFolio() {
           <img src={selectedImage} alt="Aperçu" className={styles.lightboxImage} />
         </div>
       )}
+
+     {showTopButton && (
+        <button 
+          className={styles.goTopButton} 
+          onClick={scrollToTop}
+        >
+          <img src={topIcon} alt="Go to top" />
+        </button>
+      )}
+
     </div>
   );
 }
