@@ -1,38 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './PortFolioStyles.module.css';
 import PortfolioCard from '../../components/PortfolioCard';
+
 import zoomIcon from "../../assets/loupe1.png";
 
 
 function PortFolio() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [images, setImages] = useState([]);
-
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const res = await fetch('https://lasublimeuse-backend.onrender.com/api/upload/files');
-        const data = await res.json();
-
-        if (data && data.length) {
-          
-          const urls = data.map(img => img.url);
-          setImages(urls);
-        } else {
-          console.warn('Aucune image trouvée dans la Media Library');
-        }
-      } catch (err) {
-        console.error('Erreur fetch images', err);
-      }
-    };
-
-    fetchImages();
-  
-  },
-   []);
-
-  
+  const importAll = (r) => r.keys().map(r);
+  const images = importAll(require.context('../../assets/portfolio', false, /\.(png|jpe?g|svg)$/));
 
   const handleImageClick = (src) => setSelectedImage(src);
   const closeLightbox = () => setSelectedImage(null);
@@ -40,6 +16,7 @@ function PortFolio() {
   return (
     <div id="portfolio" className={styles.container}>
       <div className={styles.portfolioContainer} style={{ "--zoom-icon": `url(${zoomIcon})` }}>
+       
         {images.map((url, index) => (
           <div className={styles.card} key={index} onClick={() => handleImageClick(url)}>
             <PortfolioCard source={url} />
