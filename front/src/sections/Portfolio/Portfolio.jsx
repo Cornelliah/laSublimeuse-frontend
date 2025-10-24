@@ -15,7 +15,9 @@ function PortFolio() {
     'p5.jpg',
     'p6.jpg',
     'p7.jpg',
-    'p8.jpg'
+    'p8.jpg',
+    'p9.jpg',
+    'p10.jpg'
    
   ];
   const images = imageNames.map(name => `/portfolio/${name}`);
