@@ -8,7 +8,7 @@ import zoomIcon from "../../assets/loupe1.png";
 function PortFolio() {
   const [selectedImage, setSelectedImage] = useState(null);
   const importAll = (r) => r.keys().map(r);
-  const images = importAll(require.context('../../assets/portfolio', false, /\.(png|jpe?g|svg)$/));
+  const images = importAll(require.context('../../../public/portfolio', false, /\.(png|jpe?g|svg)$/));
 
   const handleImageClick = (src) => setSelectedImage(src);
   const closeLightbox = () => setSelectedImage(null);
