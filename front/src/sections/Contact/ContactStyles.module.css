@@ -85,7 +85,20 @@
 .socials a:hover {
   color: #b17a5b; 
 }
+.calendlyLink{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;;
+    transition: color 0.3s;
+    background-color:#673433;
+    border-radius: 10px;
+    padding: 10px;
+}
 
+.calendlyLink:hover {
+  background-color: #9c6c66; 
+}
 .reseau{
     width: 30px;
     margin-right: 5px;

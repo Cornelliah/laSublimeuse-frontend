@@ -21,8 +21,8 @@ function PortFolio() {
    
   ];
   const images = imageNames.map(name => `/portfolio/${name}`);
-
-  const handleImageClick = (src) => setSelectedImage(src);
+  
+const handleImageClick = (src) => setSelectedImage(src);
   const closeLightbox = () => setSelectedImage(null);
 
   return (

@@ -18,6 +18,14 @@ function Contact() {
   const [copyMessage, setCopyMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
+  const openCalendly = () => {
+  if (window.Calendly) {
+    window.Calendly.initPopupWidget({
+      url: 'https://calendly.com/lasublimeuse/30min'
+    });
+  }
+};
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -114,6 +122,9 @@ function Contact() {
               WhatsApp
             </a>
           </div>
+            <a href="#"   onClick={(e) => {  e.preventDefault();  openCalendly();  }} className={styles.calendlyLink}>
+                  Réservez votre rendez-vous pour vous faire sublimer
+            </a>           
         </div>
 
         {submitted ? (
