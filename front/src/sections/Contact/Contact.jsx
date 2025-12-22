@@ -123,7 +123,7 @@ function Contact() {
             </a>
           </div>
             <a href="#"   onClick={(e) => {  e.preventDefault();  openCalendly();  }} className={styles.calendlyLink}>
-                  Réservez votre rendez-vous pour vous faire sublimer
+                  Réservez votre rendez-vous 
             </a>           
         </div>
 
