@@ -123,7 +123,7 @@ function Contact() {
             </a>
           </div>
             <a href="#"   onClick={(e) => {  e.preventDefault();  openCalendly();  }} className={styles.calendlyLink}>
-                  Réservez votre rendez-vous 
+                  Prendre un rendez-vous 
             </a>           
         </div>
 
@@ -134,41 +134,45 @@ function Contact() {
             <button onClick={() => setSubmitted(false)}>Retour au formulaire</button>
           </div>
         ) : (
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <img src={logo} alt="logo la sublimeuse" />
-            <input
-              type="text"
-              name="name"
-              placeholder="Votre nom"
-              required
-              value={formData.name}
-              onChange={handleChange}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Votre email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="sujet"
-              placeholder="Sujet"
-              value={formData.sujet}
-              onChange={handleChange}
-            />
-            <textarea
-              name="message"
-              placeholder="Votre message"
-              rows="5"
-              required
-              value={formData.message}
-              onChange={handleChange}
-            />
-            <button type="submit">Envoyer</button>
-          </form>
+             <div >
+                 <h2> Formulaire de Contact </h2>
+                  <form className={styles.form} onSubmit={handleSubmit}>
+                    <img src={logo} alt="logo la sublimeuse" />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Votre nom"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Votre email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    <input
+                      type="text"
+                      name="sujet"
+                      placeholder="Sujet"
+                      value={formData.sujet}
+                      onChange={handleChange}
+                    />
+                    <textarea
+                      name="message"
+                      placeholder="Votre message"
+                      rows="5"
+                      required
+                      value={formData.message}
+                      onChange={handleChange}
+                    />
+                    <button type="submit">Envoyer</button>
+                  </form>
+             </div>
+        
         )}
       </div>
     </div>
