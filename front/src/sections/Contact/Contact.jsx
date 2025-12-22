@@ -21,7 +21,7 @@ function Contact() {
   const openCalendly = () => {
   if (window.Calendly) {
     window.Calendly.initPopupWidget({
-      url: 'https://calendly.com/lasublimeuse/30min'
+      url: 'https://calendly.com/lasublimeuse/reservation'
     });
   }
 };
